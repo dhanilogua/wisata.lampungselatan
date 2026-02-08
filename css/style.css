@@ -1,0 +1,433 @@
+
+
+/* ANIMASI CARD */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* FADE */
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0; visibility: hidden;}
+}
+
+
+/* ===== RESET DASAR ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f7fb;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fbff, #e6f0ff);
+  margin: 0;
+  background-image: url("../img/background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+
+  /* tambahan penting */
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR UTAMA */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 9px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+}
+
+.container {
+  background: transparent !important;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.navbar a {
+    color: rgb(80, 219, 4);
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    background: white;
+    color: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* LOGO KIRI */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* MENU DI KANAN */
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+/* LINK MENU */
+.menu a {
+    text-decoration: none;
+    color: #000;
+    background-color: #f4b400;   /* kuning */
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+.menu a:hover {
+    background-color: #e6a700;
+}
+
+/* GARIS BAWAH SAAT AKTIF */
+.menu a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #f4b400;
+    border-radius: 3px;
+}
+
+/* ===== MAIN (BIAR FOOTER KE BAWAH) ===== */
+main {
+  flex: 1;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(60deg, #0d6efd, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.judul {
+  color: #218838;
+  text-shadow: 
+    -1px -1px 0 rgb(128, 204, 35),
+     1px -1px 0 rgb(252, 254, 255),
+     -1px 1px 0 rgb(6, 98, 103),
+     1px 1px 0 rgb(12, 16, 233);
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.card {
+    border: 1px solid #ddd;
+    padding: 9px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+}
+
+.card img {
+    width: 100%;
+    max-width: 3000px;
+    border-radius: 9px;
+}
+
+/* ===== LIST CARD ===== */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* biar rapi di layar kecil */
+}
+
+/* ===== CARD ===== */
+.card {
+  float: left;
+  width: 200px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: white;
+}
+
+.card img {
+  width: 100%;
+  height: auto;     /* ⬅ penting: biar gak gepeng */
+  display: block;
+}
+
+
+
+/* ===== DETAIL PAGE ===== */
+.detail img {
+  width: 400px;
+  max-width: 100%; /* biar aman di mobile */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {/* ================= RESET & DASAR ================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+
+  /* supaya footer ke bawah */
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+}
+
+/* ================= HEADER & NAVBAR ================= */
+header {
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+
+
+/* ================= MAIN ================= */
+main {
+  flex: 1; /* kunci footer di bawah */
+  margin-top: 20px;
+}
+
+/* ================= LIST CARD ================= */
+.list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ================= CARD ================= */
+.card {
+  width: 200px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* gambar card */
+.card img {
+  width: 100%;
+  height: auto; /* biar tidak gepeng */
+  border-radius: 6px;
+  display: block;
+}
+
+.card h3 {
+  margin: 10px 0 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ================= DETAIL PAGE ================= */
+.detail {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.detail img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* ================= KELOLA DATA ================= */
+section {
+  background: white;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 220px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.footer {
+    position: relative;
+    height: 60px;
+    background: #222;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+.footer-img.left {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.footer-img.right {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+  background-color: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* FIX WARNA SEARCH */
+.search-box input {
+  border: 3px solid #f4b400;
+  border-right: none;
+  border-radius: 0 0 8px 0;
+  padding: 8px;
+}
+
+.search-box button {
+  background-color: #f4b400 !important;
+  border-radius: 0 8px 8px 0;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #e6a700 !important;
+}
+
+/* MEMPERBESAR LOGO */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #50db04;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
